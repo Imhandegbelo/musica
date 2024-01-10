@@ -14,4 +14,6 @@ export const newRelease = [
   { thumb: cancelled, title: "Cancelled", artist: "Eminem" },
   { thumb: normad, title: "Normad", artist: "Makrol eli" },
   { thumb: blind, title: "Blind", artist: "Wiz zee" },
+//   { thumb: blind, title: "Blind", artist: "Wiz zee" },
+//   { thumb: blind, title: "Blind", artist: "Wiz zee" },
 ];

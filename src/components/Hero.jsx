@@ -9,7 +9,7 @@ import vectorbg from "../assets/hero/vectorbg.svg"
 
 export default function Hero() {
   return (
-    <div className="w-8/12 flex justify-between bg-[#609EAF] h-[375px] w-full px-10 rounded-[40px] relative overflow-x-clip">
+    <div className="w-8/12 flex justify-between bg-[#609EAF] h-[375px] px-10 rounded-[40px] relative overflow-x-clip">
       <div className="flex flex-col justify-between text-white my-10">
         <p className="">Curated playlist</p>
         <div className="">

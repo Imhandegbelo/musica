@@ -4,10 +4,13 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" exact element={<Home />} />
-      {/* <Route path="*" element={</>} /> */}
-    </Routes>
+    <div className="bg-[#1D2123]">
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        {/* <Route path="*" element={</>} /> */}
+      </Routes>
+    </div>
   );
 }
 
