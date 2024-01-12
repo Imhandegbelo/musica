@@ -12,12 +12,21 @@ import NewRelease from "../components/NewRelease";
 import MusicPlayer from "../components/MusicPlayer";
 import menu from "../assets/menu.svg";
 import { useState } from "react";
+import MobileNav from "../components/mobileNav";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const links = [
+    { icon: home, text: "Home" },
+    { icon: playlist, text: "My collections" },
+    { icon: radio, text: "Radio" },
+    { icon: videos, text: "Music videos" },
+    { icon: profile, text: "Profile" },
+    { icon: logout, text: "Logout" },
+  ];
 
   return (
-    <main className="w-full max-w-[1440px] mx-auto bg-[#1D2123] font-Quicksand">
+    <main className="w-full max-w-[1440px] mx-auto bg-[#1D2123] font-Quicksand relative">
       <header className="flex h-20 justify-between md:justify-center items-center w-full mb-6 px-6">
         <img src={logo} alt="logo" className="md:mx-auto h-10" />
         <input
@@ -29,8 +38,14 @@ export default function Home() {
           onClick={() => setMenuOpen(!menuOpen)}
           className="rounded border border-transparent hover:border-white/50 focus:border-white/50"
         >
-          <img src={menu} alt="menu" title="menu" className="h-8" />
+          {menuOpen ? (
+            <p className="text-white font-bold text-xl px-2">X</p>
+          ) : (
+            <img src={menu} alt="menu" title="menu" className="h-8" />
+          )}
         </button>
+
+        {menuOpen && <MobileNav links={links} />}
       </header>
       <div className="flex w-full relative">
         {/* sidenav */}
@@ -72,8 +87,8 @@ export default function Home() {
         </nav>
 
         {/* content */}
-        <div className="w-full pr-20 ">
-          <div className="flex gap-4 w-full">
+        <div className="w-full md:pr-20 px-6 md:px-0 mb-32">
+          <div className="flex flex-col md:flex-row gap-4 w-full">
             <Hero />
             <Charts />
           </div>
