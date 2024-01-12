@@ -2,31 +2,27 @@ import { Link } from "react-router-dom";
 import logo from "../assets/nav/logo.svg";
 import Charts from "../components/Charts";
 import Hero from "../components/Hero";
-import logout from "../assets/nav/logout.svg";
-import profile from "../assets/nav/profile.svg";
-import playlist from "../assets/nav/playlist.svg";
-import radio from "../assets/nav/radio.svg";
-import videos from "../assets/nav/videos.svg";
-import home from "../assets/nav/home.svg";
 import NewRelease from "../components/NewRelease";
 import MusicPlayer from "../components/MusicPlayer";
 import menu from "../assets/menu.svg";
 import { useState } from "react";
 import MobileNav from "../components/mobileNav";
+import SideNav from "../components/SideNav";
+import { icons } from "../data/nav_logo";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const links = [
-    { icon: home, text: "Home" },
-    { icon: playlist, text: "My collections" },
-    { icon: radio, text: "Radio" },
-    { icon: videos, text: "Music videos" },
-    { icon: profile, text: "Profile" },
-    { icon: logout, text: "Logout" },
+    { icon: icons.home, text: "Home" },
+    { icon: icons.playlist, text: "My collections" },
+    { icon: icons.radio, text: "Radio" },
+    { icon: icons.videos, text: "Music videos" },
+    { icon: icons.profile, text: "Profile" },
+    { icon: icons.logout, text: "Logout" },
   ];
 
   return (
-    <main className="w-full max-w-[1440px] mx-auto bg-[#1D2123] font-Quicksand relative">
+    <main className="w-full w-[1440px] mx-auto bg-[#1D2123] font-Quicksand relative">
       <header className="flex h-20 justify-between md:justify-center items-center w-full mb-6 px-6">
         <img src={logo} alt="logo" className="md:mx-auto h-10" />
         <input
@@ -36,7 +32,7 @@ export default function Home() {
         />
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="rounded border border-transparent hover:border-white/50 focus:border-white/50"
+          className="md:hidden rounded border border-transparent hover:border-white/50 focus:border-white/50"
         >
           {menuOpen ? (
             <p className="text-white font-bold text-xl px-2">X</p>
@@ -47,53 +43,27 @@ export default function Home() {
 
         {menuOpen && <MobileNav links={links} />}
       </header>
-      <div className="flex w-full relative">
+      <div className="flex w-fulln relative">
         {/* sidenav */}
-        <nav className="hidden md:flex flex-col h-[calc(100vh - 80px)] gap-6 w-24 pt-6">
-          <ul className="w-3/5 flex flex-col justify-centcer gap-5 py-6 rounded-t-full rounded-b-full mx-auto bg-[#1A1E1F]">
-            <li>
-              <Link to="#">
-                <img src={home} alt="home" className="mx-auto" />
-              </Link>
-            </li>
-            <li>
-              <Link to="#">
-                <img src={playlist} alt="playlist" className="mx-auto" />
-              </Link>
-            </li>
-            <li>
-              <Link to="#">
-                <img src={radio} alt="radio" className="mx-auto" />
-              </Link>
-            </li>
-            <li>
-              <Link to="#">
-                <img src={videos} alt="videos" className="mx-auto" />
-              </Link>
-            </li>
-          </ul>
-          <ul className="w-3/5 flex flex-col gap-3 py-6 rounded-t-full rounded-b-full mx-auto bg-[#1A1E1F]">
-            <li>
-              <Link to="#">
-                <img src={profile} alt="profile" className="mx-auto" />
-              </Link>
-            </li>
-            <li>
-              <Link to="#">
-                <img src={logout} alt="logout" className="mx-auto" />
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="w-full">
+          <SideNav icons={icons} />
+        </div>
 
         {/* content */}
-        <div className="w-full md:pr-20 px-6 md:px-0 mb-32">
+        <div className="w-full lg:pr-20n px-6 md:px-9 mb-32">
           <div className="flex flex-col md:flex-row gap-4 w-full">
-            <Hero />
-            <Charts />
+            <div className="md:w-8/12">
+              <Hero />
+            </div>
+            <div className="md:w-4/12">
+              <Charts />
+            </div>
           </div>
-          <NewRelease />
+          <div className="w-full">
+            <NewRelease />
+          </div>
         </div>
+
         <MusicPlayer />
       </div>
     </main>

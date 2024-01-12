@@ -82,7 +82,7 @@ export default function MusicPlayer() {
         </div>
       </div>
       <div className="hidden md:flex w-3/12 items-center gap-4">
-        <img src={speaker} alt="icon" />
+        <img src={speaker} alt="icon" className="w-6" />
         <div className="w-[160px] h-2 rounded-l-full rounded-r-full bg-white/10">
           <div className="w-[50px] h-2 rounded-l-full rounded-r-full bg-[#FACD66]"></div>
         </div>
