@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import logo from "../assets/nav/logo.svg";
 import Charts from "../components/Charts";
 import Hero from "../components/Hero";
@@ -45,21 +45,21 @@ export default function Home() {
       </header>
       <div className="flex w-fulln relative">
         {/* sidenav */}
-        <div className="w-full">
+        <div className="w-1/12">
           <SideNav icons={icons} />
         </div>
 
         {/* content */}
-        <div className="w-full lg:pr-20n px-6 md:px-9 mb-32">
-          <div className="flex flex-col md:flex-row gap-4 w-full">
-            <div className="md:w-8/12">
+        <div className="w-11/12 lg:pr-20n px-6 md:px-9 mb-32">
+          <div className="flex flex-col md:flex-row gap-4 pr-10 w-full">
+            <div className="md:w-7/12">
               <Hero />
             </div>
-            <div className="md:w-4/12">
+            <div className="md:w-5/12">
               <Charts />
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full mr-10">
             <NewRelease />
           </div>
         </div>

@@ -9,7 +9,7 @@ import vectorbg from "../assets/hero/vectorbg.svg";
 
 export default function Hero() {
   return (
-    <div className="flex justify-between bg-[#609EAF] h-[375px] md:h-[400px/] px-10 rounded-[40px] relative overflow-x-clip">
+    <div className="flex justify-between bg-[#609EAF] h-[375px] md:h-[400px] px-10 rounded-[40px] relative overflow-x-clip">
       <div className="flex flex-col justify-between text-white my-10">
         <p className="">Curated playlist</p>
         <div className="">
@@ -52,7 +52,7 @@ export default function Hero() {
         </div>
       </div>
       <img src={main_hero} alt="" className="hidden md:block z-10" />
-      <img src={vectorbg} alt="" className=" absolute right-0 top-0" />
+      <img src={vectorbg} alt="" className=" absolute right-0 top-0 h-full" />
     </div>
   );
 }

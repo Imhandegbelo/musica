@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function SideNav({ icons }) {
   return (
     <nav className="hidden md:flex flex-col h-[calc(100vh - 80px)] gap-6">
-      <ul className="flex flex-col justify-centcer gap-5 py-6 rounded-t-full rounded-b-full mx-auto bg-[#1A1E1F]">
+      <ul className="flex flex-col justify-center gap-5 py-6 rounded-t-full rounded-b-full mx-auto bg-[#1A1E1F]">
         <li>
           <Link to="#">
             <img src={icons.home} alt="home" className="mx-auto" />

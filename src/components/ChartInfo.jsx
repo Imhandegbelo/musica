@@ -10,7 +10,11 @@ export default function ChartInfo({ chart }) {
       <div className="flex flex-col md:flex-row w-[200px] md:w-full gap-4">
         <img src={chart.thumb} alt="" className="w-[120px] md:w-[75px]" />
         <div className="">
-          <Link to={`/chart/${chart.id}`} className="text-[17px] text-white">
+          <Link
+            to={`/chart/${chart.id}`}
+            state={{ id: `${chart.id}` }}
+            className="text-[17px] text-white"
+          >
             {chart.name}
           </Link>
           <p className="text-xs text-white/50">{chart.artist}</p>
