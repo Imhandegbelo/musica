@@ -29,7 +29,7 @@ export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="flex justify-between gap-6 items-center h-32 w-full max-w-[1440px] bg-[#1D2123] bg-opacity-60 backdrop-blur-xl fixed bottom-0 px-6 md:px-24">
+    <div className="flex justify-between gap-6 items-center h-32 w-screen max-w-[1440px] bg-[#1D2123] bg-opacity-60 backdrop-blur-xl fixed bottom-0 px-6 md:px-24">
       <div className="flex gap-4 md:w-3/12">
         <img src={thumb2} alt="thumb_player" className="h-[70px]" />
         <div className="font-bold">
