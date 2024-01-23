@@ -9,7 +9,6 @@ export default {
       },
       backgroundImage: {
         search: 'url("../src/assets/search.svg")',
-        collection: 'url("../src/assets/charts/big_tomorrow.jpeg") no-repeat left top;'
       }
     },
   },
