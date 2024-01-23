@@ -46,7 +46,7 @@ export default function DefaultLayout({ children }) {
         </div>
         <main className="w-full md:w-11/12">{children}</main>
       </div>
-      <MusicPlayer />
+      <MusicPlayer classname={location === "collection" ? "hidden" : ""} />
     </div>
   );
 }

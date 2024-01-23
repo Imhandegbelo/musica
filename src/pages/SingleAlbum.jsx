@@ -14,8 +14,13 @@ export default function SingleAlbum() {
 
   return (
     <DefaultLayout>
-      <div className="w-full px-6 md:px-0 mb-32">
-        <div className="flex flex-col md:flex-row gap-10 mb-14">
+        <img
+          src={charts[ACTUAL_ID].banner}
+          alt={`${charts[ACTUAL_ID].name}`}
+          className="w-11/12 absolute h-full z-0"
+        />
+      <div className="w-full px-6 md:px-0 mb-32 absolute top-0 bg-black/60">
+        <div className="bg-collection flex flex-col md:flex-row gap-10 mb-14">
           <div>
             <img
               src={charts[ACTUAL_ID].banner}

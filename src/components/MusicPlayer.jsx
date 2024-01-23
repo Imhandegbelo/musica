@@ -8,7 +8,7 @@ import play from "../assets/musicPlayer/vector.svg";
 import repeat from "../assets/musicPlayer/repeat.svg";
 import { useState } from "react";
 
-export default function MusicPlayer() {
+export default function MusicPlayer({ classname = "" }) {
   const handleNext = () => {
     console.log("Next");
   };
@@ -29,7 +29,9 @@ export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="flex justify-between gap-6 items-center h-32 w-screen max-w-[1440px] bg-[#1D2123] bg-opacity-60 backdrop-blur-xl fixed bottom-0 px-6 md:px-24">
+    <div
+      className={`${classname} flex justify-between gap-6 items-center h-32 w-screen max-w-[1440px] bg-[#1D2123] bg-opacity-60 backdrop-blur-xl fixed bottom-0 px-6 md:px-24`}
+    >
       <div className="flex gap-4 md:w-3/12">
         <img src={thumb2} alt="thumb_player" className="h-[70px]" />
         <div className="font-bold">
@@ -44,14 +46,14 @@ export default function MusicPlayer() {
             title="shuffle"
             className="hidden md:block p-1 h-min rounded-full hover:shadow-md hover:shadow-[#FACD66]"
           >
-            <img src={shuffle} alt="shuffle"  className="w-6" />
+            <img src={shuffle} alt="shuffle" className="w-6" />
           </button>
           <button
             onClick={handlePrevious}
             title="previous"
             className="hidden md:block p-1 h-min rounded-full hover:shadow-md hover:shadow-[#FACD66]"
           >
-            <img src={previous} alt="previous"  className="w-6" />
+            <img src={previous} alt="previous" className="w-6" />
           </button>
           <button
             onClick={handlePlay}
