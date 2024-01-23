@@ -5,18 +5,20 @@ import SideNav from "../components/SideNav";
 import { icons } from "../data/nav_logo";
 import MobileNav from "../components/mobileNav";
 import MusicPlayer from "../components/MusicPlayer";
+import { useLocation } from "react-router";
 
 export default function DefaultLayout({ children }) {
+  const location = useLocation();
+  const active = location.pathname === "/" ? "/" : location.pathname.slice(1);
   const [menuOpen, setMenuOpen] = useState(false);
   const links = [
     { icon: icons.home, text: "Home", path: "/home" },
-    { icon: icons.playlist, text: "My collections", path: "#" },
+    { icon: icons.playlist, text: "My collections", path: "/collection" },
     { icon: icons.radio, text: "Radio", path: "#" },
     { icon: icons.videos, text: "Music videos", path: "#" },
     { icon: icons.profile, text: "Profile", path: "#" },
     { icon: icons.logout, text: "Logout", path: "#" },
   ];
-
   return (
     <div className="relative font-Quicksand">
       <header className="flex h-20 justify-between md:justify-center items-center w-full mb-6 px-6">
@@ -40,7 +42,7 @@ export default function DefaultLayout({ children }) {
       </header>
       <div className="flex md:mr-10 relative">
         <div className="hidden md:block md:w-1/12">
-          <SideNav icons={icons} />
+          <SideNav icons={icons} active={active} />
         </div>
         <main className="w-full md:w-11/12">{children}</main>
       </div>
