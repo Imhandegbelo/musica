@@ -6,10 +6,10 @@ import DefaultLayout from "../Layout/DefaultLayout";
 export default function Home() {
   return (
     <DefaultLayout>
-      <div className="w-full w-[1440pxx] mx-auto bg-[#1D2123]">
+      <div className="w-full mx-auto bg-[#1D2123]">
         <div className="flex w-full">
           <div className="w-full px-6 md:px-0 mb-32">
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col md:flex-row mt-6 gap-4">
               <div className="md:w-7/12">
                 <Hero />
               </div>

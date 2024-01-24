@@ -6,7 +6,7 @@ import play from "../assets/collection/play.svg";
 export default function Collection() {
   return (
     <DefaultLayout>
-      <div className="px-6 md:pr-10">
+      <div className="px-6 md:pr-10 mt-10">
         <div className="flex gap-4 w-full md:w-[300px] mb-[4rem]">
           <Button
             text="My collection"
@@ -20,7 +20,7 @@ export default function Collection() {
           />
         </div>
 
-        <div className="flex flex-col gap-6 md:flex-row">
+        <div className="flex flex-col gap-6 mb-40 md:flex-row">
           {collections.map((collection) => (
             <div
               key={collection.title}

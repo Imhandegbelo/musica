@@ -1,15 +1,15 @@
 import main_hero from "../assets/hero/main-hero.png";
 import ellipse_1 from "../assets/hero/ellipse-1.png";
 import ellipse_2 from "../assets/hero/ellipse-2.png";
-import ellipse_3 from "../assets/hero/ellipse-3-(1).png";
-import ellipse_4 from "../assets/hero/ellipse-4-(1).png";
+import ellipse_3 from "../assets/hero/ellipse-3.png";
+import ellipse_4 from "../assets/hero/ellipse-4.png";
 import ellipse_5 from "../assets/hero/ellipse-5.png";
 import heart_white from "../assets/hero/Heart.svg";
 import vectorbg from "../assets/hero/vectorbg.svg";
 
 export default function Hero() {
   return (
-    <div className="flex justify-between bg-[#609EAF] h-[375px] md:h-[400px] px-10 rounded-[40px] relative overflow-x-clip">
+    <div className="flex justify-between bg-[#609EAF] h-[375px]/ h-full md:h-[400px]/ px-6 md:px-10 rounded-[40px] relative overflow-x-clip">
       <div className="flex flex-col justify-between text-white my-10">
         <p className="">Curated playlist</p>
         <div className="">
@@ -21,7 +21,7 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex">
-            <div className="flex gap-2n relative">
+            <div className="flex relative">
               <img src={ellipse_1} alt="" className="w-10 h-10" />
               <img
                 src={ellipse_2}
@@ -51,8 +51,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <img src={main_hero} alt="" className="hidden md:block z-10" />
-      <img src={vectorbg} alt="" className=" absolute right-0 top-0 h-full" />
+      <img src={main_hero} alt="" className="hidden sm:block z-10" />
+      <img src={vectorbg} alt="" className="absolute right-0 top-0 h-full" />
     </div>
   );
 }

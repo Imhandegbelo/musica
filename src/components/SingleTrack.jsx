@@ -26,9 +26,9 @@ export default function SingleTrack({ track }) {
             <img src={more} alt="" className="" />
           </button>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between pr-2">
           <p className="text-[10px]">{track.type}</p>
-          <p className="w-2//6">{track.time}</p>
+          <p className="text-xs">{track.time}</p>
         </div>
       </div>
 
